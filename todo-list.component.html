@@ -1,0 +1,15 @@
+<p>todo-list works!</p>
+<div>
+  <h2>Todo list</h2>
+  <input [(ngModel)] ="newTask"
+  placeholder ="Add a new task" />
+  <button (click)="addTask()"> Add </button>
+
+  <ul>
+    <Li *ngFor ="let task of tasks; let i = index">
+      {{ task }}
+      <button
+    (click) = "removeTask(i)"> Remove </button>
+    </Li>
+  </ul>
+</div>
